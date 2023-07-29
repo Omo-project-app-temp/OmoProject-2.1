@@ -42,7 +42,7 @@ jobs:
               #run: python lint.py
       
             - name: Terraform format
-                #id: format
+              id: format
               run: terraform fmt
        
             - name: Run tfsec
@@ -53,19 +53,19 @@ jobs:
                  tflint .
         
             - name: Terraform init
-                #id: init
+              id: init
               run: terraform init -reconfigure -backend=false
         
             - name: Terraform validate
-                #id: validate
+              id: validate
               run: terraform validate
   
             - name: Terraform plan
-                #id: plan
+              id: plan
               run: terraform plan -out=tfplan
   
             - name: Terraform show
-                #id: show
+              id: show
               run: terraform show -json ./tfplan > tfplan.json
               
             - name: run Checkov

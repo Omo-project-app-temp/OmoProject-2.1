@@ -1,5 +1,5 @@
 # EC2 Instance
-resource "aws_instance" "myec2" {
+/*resource "aws_instance" "myec2" {
   ami = data.aws_ami.amzlinux2.id
   #instance_type = var.instance_type
   instance_type = var.instance_type_list[0]  # For List
@@ -11,7 +11,7 @@ resource "aws_instance" "myec2" {
   tags = {
     "Name" = "Prod-${count.index}"
   }
-}
+}*/
 
 /*
 # Drawbacks of using count in this example

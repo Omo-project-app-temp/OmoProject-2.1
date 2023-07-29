@@ -1,5 +1,5 @@
 # Create VPC Terraform Module
-module "vpc" {
+/*module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "3.11.5"
   #version = "~> 2.78"
@@ -40,4 +40,4 @@ module "vpc" {
   database_subnet_tags = {
     Type = "Private Database Subnets"
   }
-}
+}*/

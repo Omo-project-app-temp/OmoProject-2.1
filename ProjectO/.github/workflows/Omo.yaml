@@ -74,9 +74,12 @@ jobs:
             - name: Terraform show
               #id: show
               run: terraform show -json ./tfplan > tfplan.json
+            
+            - name: run Checkov
+              run: checkov -f tfplan.json
 
-            - name: run checkov
-              uses: bridgecrewio/checkov-action@master
+           # - name: run checkov
+             # uses: bridgecrewio/checkov-action@master
        # with:
             #directory: .
             #soft_fail: true

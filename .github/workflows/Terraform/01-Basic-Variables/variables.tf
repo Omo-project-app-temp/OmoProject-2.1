@@ -1,5 +1,5 @@
 # Input Variables
-/* variable "aws_region" {
+variable "aws_region" {
   description = "Region in which AWS resources to be created"
   type        = string
   default     = "us-west-1"
@@ -15,4 +15,4 @@ variable "ec2_instance_count" {
   description = "EC2 Instance Count"
   type        = number
   default     = 1
-} */
+} 

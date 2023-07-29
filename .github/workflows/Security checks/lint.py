@@ -3,7 +3,7 @@ import re
 import os
 import hcl
 
-file = glob.glob('terraform22.tfvars')
+file = glob.glob('terraform.tfvars')
 region_validator = re.compile('(us(-gov)?|ap|ca|cn|eu|sa)-(central|(north|south)?(east|west)?)-?(1|2)')
 cidr_validator = re.compile('^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$')
 

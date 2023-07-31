@@ -27,8 +27,11 @@ resource "aws_launch_configuration" "my_web_config" {
   name = "my_web_config"
   image_id = data.aws_ami.amzlinux2.id
   instance_type = "t2.micro"
+ 
+ # root_block_device {
+   # encrypted = true
+  }
 
-}
 
 data "aws_ami" "amzlinux2" {
   most_recent = true

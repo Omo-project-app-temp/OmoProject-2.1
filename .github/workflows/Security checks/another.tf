@@ -39,7 +39,6 @@ data "aws_ami" "amzlinux2" {
   }
   filter {
     name   = "root-device-type"
-    encrypted = true
     values = ["ebs"]
   }
   filter {

@@ -2,6 +2,10 @@ name: shell commands
 
 on: [push]
 
+env:
+  AWS_ACCESS_KEY_ID: ${{ 'SECRETS_AWS_ACCESS_KEY_ID' }}
+  AWS_SECRET_ACCESS_KEY: ${{ 'SECRETS_AWS_SECRET_KEY_ID' }}
+
 jobs:
     run-shell-command:
         runs-on: ubuntu-latest
